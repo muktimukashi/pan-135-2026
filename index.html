@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performa Anak Negeri 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="audio/musici.mp3" type="audio/mpeg" />
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- POPUP OPENING -->
+  <div class="popup-overlay" id="popup">
+    <video class="popup-video" id="introVideo" muted playsinline preload="auto">
+      <source src="video/intro.mp4" type="video/mp4" />
+      Browser kamu tidak mendukung video.
+    </video>
+
+    <div class="popup-dark-layer"></div>
+
+    <div class="popup-box" id="popupBox">
+      <span class="tag">🎭 Undangan PAN</span>
+      <h2>Performa Anak Negeri 2026</h2>
+      <p class="subtitle">
+        Merayakan Perbedaan: Langkah Kecil Menuju Harmoni
+      </p>
+
+      <div class="event-info">
+        <p>📅 Sabtu, 9 Mei 2026</p>
+        <p>🕖 13.00 - 15.00 WIB</p>
+        <p>📍 Makara Art Center, Universitas Indonesia</p>
+      </div>
+
+      <div class="popup-buttons">
+        <button id="playIntroBtn" class="btn primary">Buka</button>
+        <button id="skipMusicBtn" class="btn secondary">Tanpa Musik</button>
+      </div>
+    </div>
+
+    <div class="video-caption hidden" id="videoCaption">
+      <span>Performa Anak Negeri 2026</span>
+      <h1>Merayakan Perbedaan</h1>
+      <p>
+        Langkah kecil menuju harmoni, dalam panggung yang menyatukan cerita,
+        gerak, dan rasa.
+      </p>
+      <div class="caption-info">
+        <p>Sabtu, 9 Mei 2026</p>
+        <p>13.00 - 15.00 WIB</p>
+        <p>Makara Art Center, Universitas Indonesia</p>
+      </div>
+    </div>
+
+    <div class="intro-status hidden" id="introStatus">
+      <!-- <p>Opening performance...</p> -->
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="mainContent" class="hidden">
+    <div class="fixed-stage">
+      <div class="stage-overlay"></div>
+
+      <div class="top-bar">
+        <div class="brand">Performa Anak Negeri 2026</div>
+        <button class="music-toggle" id="musicToggle">🔊 Music On</button>
+      </div>
+    </div>
+
+    <section class="story-panel hero-panel">
+      <div class="story-box scroll-fade">
+        <p class="eyebrow">Performa Anak Negeri 2026</p>
+        <h1>Merayakan Perbedaan</h1>
+        <p class="lead">
+          Langkah kecil menuju harmoni, dalam panggung yang menyatukan cerita,
+          gerak, dan rasa.
+        </p>
+        <div class="caption-info">
+          <p>Sabtu, 9 Mei 2026</p>
+          <p>13.00 - 15.00 WIB</p>
+          <p>Makara Art Center, Universitas Indonesia</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-panel">
+      <div class="story-box scroll-fade">
+        <p class="eyebrow">A STORY OF US</p>
+        <h2>Merayakan Perbedaan</h2>
+        <p>
+          Di setiap langkah, di setiap nada,
+          tersimpan cerita tentang keberagaman yang menyatu dalam harmoni.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-panel">
+      <div class="story-box scroll-fade">
+        <p class="eyebrow">THE MOMENT</p>
+        <h2>Lebih Dari Sekadar Pertunjukan</h2>
+        <p>
+          Ini bukan hanya panggung.
+          Ini adalah ruang di mana emosi berbicara,
+          dan setiap gerakan memiliki makna.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-panel">
+      <div class="story-box scroll-fade">
+        <p class="eyebrow">SAVE THE DATE</p>
+        <h2>Satu Malam, Satu Cerita</h2>
+        <p>📅 Sabtu, 9 Mei 2026</p>
+        <p>🕖 13.00 – 15.00 WIB</p>
+        <p>📍 Makara Art Center, Universitas Indonesia</p>
+      </div>
+    </section>
+
+    <section class="story-panel">
+      <div class="story-box scroll-fade">
+        <p class="eyebrow">BE PART OF THE STORY</p>
+        <h2>Apakah Kamu Siap Menyaksikan?</h2>
+        <p>
+          Datanglah, dan biarkan dirimu menjadi bagian dari cerita
+          yang akan dikenang lebih dari sekadar satu malam.
+        </p>
+
+        <div class="cta-group">
+          <a href="#" class="btn primary">RSVP Sekarang</a>
+          <a href="#" class="btn secondary">Lihat Detail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
