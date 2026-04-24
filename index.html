@@ -5,12 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Performa Anak Negeri 2026</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    @media (max-width: 768px) {
+      #videoCaption {
+        width: min(94vw, 680px);
+        padding: 18px 14px;
+      }
+
+      #videoCaption .eyebrow {
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+      }
+
+      #videoCaption h2 {
+        margin-bottom: 16px;
+      }
+
+      #videoCaption > p:not(.eyebrow) {
+        max-width: 92%;
+      }
+
+      #videoCaption .caption-info p {
+        margin-top: 2px;
+      }
+
+      #heroIntro {
+        padding: 24px 16px;
+      }
+
+      #heroIntro .intro-title {
+        margin-bottom: 16px;
+      }
+
+      #heroIntro .lead,
+      #storyTextBox p {
+        max-width: 100%;
+      }
+
+      #storyTextBox {
+        padding: 24px 18px;
+      }
+
+      #storyTextBox h2 {
+        margin-bottom: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- AUDIO -->
-  <audio id="bgMusic" loop preload="auto">
+  <audio id="bgMusic" preload="auto">
     <source src="audio/musici.mp3" type="audio/mpeg" />
+    Browser kamu tidak mendukung audio.
+  </audio>
+  <audio id="mainMusic" loop preload="auto">
+    <source src="audio/Saxo Semut.mp3" type="audio/mpeg" />
     Browser kamu tidak mendukung audio.
   </audio>
 
@@ -24,35 +74,34 @@
     <div class="popup-dark-layer"></div>
 
     <div class="popup-box" id="popupBox">
-      <span class="tag">🎭 Undangan PAN</span>
-      <h2>Performa Anak Negeri 2026</h2>
+      <span class="tag">🎭 Undangan PAN 2026 | Level 2,4,6</span>
+      <h2>Merayakan Perbedaan: <br>Langkah Kecil Menuju Harmoni</h2>
       <p class="subtitle">
-        Merayakan Perbedaan: Langkah Kecil Menuju Harmoni
+        Menyatukan Keunikan, Membangun Keberagaman
       </p>
 
       <div class="event-info">
         <p>📅 Sabtu, 9 Mei 2026</p>
-        <p>🕖 13.00 - 15.00 WIB</p>
+          <p>🕖 09.00 - 11.00 WIB</p>
         <p>📍 Makara Art Center, Universitas Indonesia</p>
       </div>
 
       <div class="popup-buttons">
-        <button id="playIntroBtn" class="btn primary">Buka</button>
-        <button id="skipMusicBtn" class="btn secondary">Tanpa Musik</button>
+        <button id="playIntroBtn" class="btn primary">Buka Undangan</button>
+        <!-- ini <button id="skipMusicBtn" class="btn secondary">Tanpa Musik</button> -->
       </div>
     </div>
 
-    <div class="video-caption hidden" id="videoCaption">
-      <span>Performa Anak Negeri 2026</span>
-      <h1>Merayakan Perbedaan</h1>
-      <p>
-        Langkah kecil menuju harmoni, dalam panggung yang menyatukan cerita,
-        gerak, dan rasa.
+    <div class="intro-copy video-caption hidden" id="videoCaption" style="width: min(920px, 94%); padding: clamp(28px, 4vw, 44px);">
+      <p class="eyebrow" style="font-size: clamp(0.95rem, 1vw, 1.1rem); letter-spacing: 5px; margin-bottom: 18px;">Performa Anak Negeri 2026 | Level 2,4,6</p>
+      <h2 style="font-size: clamp(2.5rem, 4.8vw, 4.6rem); line-height: 1.02; margin-bottom: 20px; text-shadow: 0 6px 28px rgba(0, 0, 0, 0.72);">Merayakan Perbedaan: <br>Langkah Kecil Menuju Harmoni</h2>
+      <p style="max-width: 760px; font-size: clamp(1.35rem, 2vw, 1.95rem); line-height: 1.75;">
+        Menyatukan Keunikan, Membangun Keberagaman
       </p>
-      <div class="caption-info">
-        <p>Sabtu, 9 Mei 2026</p>
-        <p>13.00 - 15.00 WIB</p>
-        <p>Makara Art Center, Universitas Indonesia</p>
+      <div class="caption-info" style="margin-top: 20px;">
+        <p>📅 Sabtu, 9 Mei 2026</p>
+        <p>🕖 09.00 – 11.00 WIB</p>
+        <p>📍 Makara Art Center, Universitas Indonesia</p>
       </div>
     </div>
 
@@ -65,6 +114,10 @@
   <main id="mainContent" class="hidden">
     <div class="fixed-stage">
       <div class="stage-overlay"></div>
+      <div class="golden-spotlight" aria-hidden="true">
+        <span class="sparkle-layer layer-one"></span>
+        <span class="sparkle-layer layer-two"></span>
+      </div>
 
       <div class="top-bar">
         <div class="brand">Performa Anak Negeri 2026</div>
@@ -72,33 +125,38 @@
       </div>
     </div>
 
-    <section class="story-panel hero-panel">
-      <div class="story-box scroll-fade">
-        <p class="eyebrow">Performa Anak Negeri 2026</p>
-        <h1>Merayakan Perbedaan</h1>
-        <p class="lead">
-          Langkah kecil menuju harmoni, dalam panggung yang menyatukan cerita,
-          gerak, dan rasa.
+    <section class="story-panel hero-panel" style="padding-top: 100px; padding-bottom: 96px;">
+      <div class="intro-copy story-box scroll-fade" id="heroIntro" style="width: min(920px, 94%); padding: clamp(28px, 4vw, 44px); transform: translateY(24px);">
+        <p class="eyebrow" style="font-size: clamp(0.95rem, 1vw, 1.1rem); letter-spacing: 5px; margin-bottom: 18px;">Performa Anak Negeri 2026 | Level 2,4,6</p>
+        <span class="intro-title" style="display: block; margin-bottom: 20px; font-size: clamp(2.5rem, 4.8vw, 4.6rem); line-height: 1.02; font-weight: 700; text-shadow: 0 6px 28px rgba(0, 0, 0, 0.72);">Merayakan Perbedaan: <br>Langkah Kecil Menuju Harmoni</span>
+        <p class="lead" style="max-width: 760px; font-size: clamp(1.35rem, 2vw, 1.95rem); line-height: 1.75;">
+          Menyatukan Keunikan, Membangun Kebergaman
         </p>
-        <div class="caption-info">
-          <p>Sabtu, 9 Mei 2026</p>
-          <p>13.00 - 15.00 WIB</p>
-          <p>Makara Art Center, Universitas Indonesia</p>
+        <div class="caption-info" style="margin-top: 22px;">
+        <p>📅 Sabtu, 9 Mei 2026</p>
+        <p>🕖 09.00 – 11.00 WIB</p>
+        <p>📍 Makara Art Center, Universitas Indonesia</p>
         </div>
       </div>
     </section>
 
     <section class="story-panel">
-      <div class="story-box scroll-fade">
-        <p class="eyebrow">A STORY OF US</p>
-        <h2>Merayakan Perbedaan</h2>
+      <div class="story-box story-text scroll-fade">
+        <p class="eyebrow">SEBUAH KISAH</p>
+        <h2>Menyatukan Keunikan, Membangun Kebergaman</h2>
         <p>
-          Di setiap langkah, di setiap nada,
-          tersimpan cerita tentang keberagaman yang menyatu dalam harmoni.
+          Masa pandemi memiliki kenangan yang berarti. Hari-hari terasa berat dengan berinteraksi jarak jauh.
+Saat kehidupan kembali keadaan normal Mina, memberanikan diri tampil mendongeng di festival literasi. 
+Kegagalan teknis terjadi membuatnya kehilanga percaya diri. Beruntung Mina didukung dengan banyak sahabat. 
+<br><br>
+Perjalanan mereka berlanjut dengan mengenal budaya, alam, serta belajar menjaga lingkungan. Mereka memahami bahwa setiap orang memiliki keunikan. Perbedaan bukan untuk dipertentangkan, tetapi dirayakan.
+<br><br>
+Yuk, ikuti perjalanan Mina dan sahabat menyatukan keberagaman dan keberanian!
+
         </p>
       </div>
     </section>
-
+<!-- 
     <section class="story-panel">
       <div class="story-box scroll-fade">
         <p class="eyebrow">THE MOMENT</p>
@@ -109,19 +167,192 @@
           dan setiap gerakan memiliki makna.
         </p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="story-panel">
-      <div class="story-box scroll-fade">
-        <p class="eyebrow">SAVE THE DATE</p>
-        <h2>Satu Malam, Satu Cerita</h2>
-        <p>📅 Sabtu, 9 Mei 2026</p>
-        <p>🕖 13.00 – 15.00 WIB</p>
-        <p>📍 Makara Art Center, Universitas Indonesia</p>
+    <section class="story-panel performance-panel">
+      <div class="performance-content scroll-fade">
+        <div class="section-heading">
+          <p class="eyebrow">ON STAGE</p>
+          <h2>Penampilan</h2>
+        </div>
+
+        <div class="performance-stage">
+          <div class="performance-spotlight" id="performanceSpotlight">
+            <span class="performance-number">01</span>
+            <h3>Opening Parade</h3>
+            <p>Awal perjalanan yang memperkenalkan warna, karakter, dan energi anak-anak di atas panggung.</p>
+          </div>
+
+          <div class="performance-list" aria-label="Daftar penampilan">
+            <button class="performance-item active" type="button" data-title="Opening Parade" data-number="01" data-copy="Awal perjalanan yang memperkenalkan warna, karakter, dan energi anak-anak di atas panggung.">
+              <span>01</span>
+              <strong>Opening Parade</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Drama Musikal" data-number="02" data-copy="Kisah Lona dan Kaza dibawakan melalui dialog, gerak, musik, dan momen nostalgia masa sekolah.">
+              <span>02</span>
+              <strong>Drama Musikal</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Tari Nusantara" data-number="03" data-copy="Perayaan keberagaman lewat koreografi yang membawa nuansa budaya dari berbagai daerah.">
+              <span>03</span>
+              <strong>Tari Nusantara</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Choir Anak Negeri" data-number="04" data-copy="Suara bersama yang menutup cerita dengan hangat, penuh harapan, dan rasa kebersamaan.">
+              <span>04</span>
+              <strong>Choir Anak Negeri</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Choir Anak Negeri" data-number="04" data-copy="Suara bersama yang menutup cerita dengan hangat, penuh harapan, dan rasa kebersamaan.">
+              <span>05</span>
+              <strong>Choir Anak Negeri</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Choir Anak Negeri" data-number="04" data-copy="Suara bersama yang menutup cerita dengan hangat, penuh harapan, dan rasa kebersamaan.">
+              <span>06</span>
+              <strong>Choir Anak Negeri</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Choir Anak Negeri" data-number="04" data-copy="Suara bersama yang menutup cerita dengan hangat, penuh harapan, dan rasa kebersamaan.">
+              <span>07</span>
+              <strong>Choir Anak Negeri</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Choir Anak Negeri" data-number="04" data-copy="Suara bersama yang menutup cerita dengan hangat, penuh harapan, dan rasa kebersamaan.">
+              <span>08</span>
+              <strong>Choir Anak Negeri</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Choir Anak Negeri" data-number="04" data-copy="Suara bersama yang menutup cerita dengan hangat, penuh harapan, dan rasa kebersamaan.">
+              <span>09</span>
+              <strong>Choir Anak Negeri</strong>
+            </button>
+            <button class="performance-item" type="button" data-title="Choir Anak Negeri" data-number="04" data-copy="Suara bersama yang menutup cerita dengan hangat, penuh harapan, dan rasa kebersamaan.">
+              <span>10</span>
+              <strong>Choir Anak Negeri</strong>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="story-panel">
+    <!-- <section class="story-panel">
+      <div class="story-box scroll-fade">
+        <p class="eyebrow">SAVE THE DATE</p>
+        <h2>Sekolah yang Kurindukan</h2>
+        <p>📅 Sabtu, 9 Mei 2026</p>
+        <p>🕖 09.00 – 11.00 WIB</p>
+        <p>📍 Makara Art Center, Universitas Indonesia</p>
+      </div>
+    </section> -->
+
+    <!-- <section class="story-panel gallery-panel">
+      <div class="cinematic-gallery scroll-fade" aria-label="Galeri suasana acara">
+        <div class="section-heading">
+          <p class="eyebrow">GALLERY PREVIEW</p>
+          <h2>Cuplikan Suasana</h2>
+        </div>
+
+        <div class="gallery-frame">
+          <div class="gallery-track" id="galleryTrack">
+            <article class="gallery-slide active">
+              <img src="https://picsum.photos/seed/pan-stage-2026/1200/760" alt="Dummy foto panggung pertunjukan" />
+              <div class="slide-caption">
+                <span>01</span>
+                <p>Panggung yang hangat, penuh cahaya, dan siap membuka cerita.</p>
+              </div>
+            </article>
+            <article class="gallery-slide">
+              <img src="https://picsum.photos/seed/pan-friends-2026/1200/760" alt="Dummy foto kebersamaan anak-anak" />
+              <div class="slide-caption">
+                <span>02</span>
+                <p>Momen kecil yang membuat perjalanan pulang ke masa SD terasa dekat.</p>
+              </div>
+            </article>
+            <article class="gallery-slide">
+              <img src="https://picsum.photos/seed/pan-backstage-2026/1200/760" alt="Dummy foto persiapan belakang panggung" />
+              <div class="slide-caption">
+                <span>03</span>
+                <p>Di balik tirai, setiap detail disiapkan untuk satu pengalaman yang berkesan.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="gallery-controls">
+            <button class="gallery-btn" id="prevSlide" type="button" aria-label="Foto sebelumnya">‹</button>
+            <button class="gallery-btn" id="nextSlide" type="button" aria-label="Foto berikutnya">›</button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section class="story-panel video-panel">
+      <div class="video-content scroll-fade">
+        <div class="section-heading">
+          <p class="eyebrow">VIDEO PREVIEW</p>
+          <h2>Intip Ceritanya Lewat Video</h2>
+        </div>
+
+        <div class="video-showcase">
+          <iframe
+            title="Video preview Performa Anak Negeri 2026"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p class="video-note">
+          Video sementara dari YouTube. Nanti tinggal ganti link embed-nya dengan video resmi acara.
+        </p>
+      </div>
+    </section> -->
+
+    <section class="story-panel rundown-panel">
+      <div class="rundown-content scroll-fade">
+        <div class="section-heading">
+          <p class="eyebrow">EVENT FLOW</p>
+          <h2>Alur Pertunjukan</h2>
+        </div>
+
+        <div class="rundown-list">
+          <div class="rundown-item">
+            <time>08.30</time>
+            <p>Registrasi tamu dan penyambutan</p>
+          </div>
+          <div class="rundown-item">
+            <time>09.00</time>
+            <p>Opening dan pembuka kisah</p>
+          </div>
+          <div class="rundown-item">
+            <time>09.20</time>
+            <p>Pementasan utama Sekolah yang Kurindukan</p>
+          </div>
+          <div class="rundown-item">
+            <time>10.40</time>
+            <p>Penutup, apresiasi, dan foto bersama</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-panel venue-panel">
+      <div class="venue-content scroll-fade">
+        <div class="venue-copy">
+          <p class="eyebrow">VENUE</p>
+          <h2>Makara Art Center</h2>
+          <p>
+            Pertunjukan berlangsung di kawasan Universitas Indonesia, Depok.
+            Gunakan peta ini sebagai titik arah sementara menuju lokasi acara.
+          </p>
+          <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Makara%20Art%20Center%20Universitas%20Indonesia" target="_blank" rel="noopener">Buka Google Maps</a>
+        </div>
+
+        <div class="map-wrap" aria-label="Peta lokasi Makara Art Center">
+          <iframe
+            title="Makara Art Center Universitas Indonesia"
+            src="https://www.google.com/maps?q=Makara%20Art%20Center%20Universitas%20Indonesia&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="story-panel">
       <div class="story-box scroll-fade">
         <p class="eyebrow">BE PART OF THE STORY</p>
         <h2>Apakah Kamu Siap Menyaksikan?</h2>
@@ -131,11 +362,23 @@
         </p>
 
         <div class="cta-group">
-          <a href="#" class="btn primary">RSVP Sekarang</a>
-          <a href="#" class="btn secondary">Lihat Detail</a>
-        </div>
+          <a href="#" class="btn primary">RSVP Sekarang</a> -->
+          <!-- <a href="#" class="btn secondary">Lihat Detail</a> -->
+        <!-- </div>
       </div>
-    </section>
+    </section> -->
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <p>Performa Anak Negeri 2026</p>
+        <p>Menyatukan Keunikan, Membangun Kebergaman · Sabtu, 9 Mei 2026 · <br>Makara Art Center UI</p>
+      </div>
+      <div class="footer-links" aria-label="Link sosial media">
+        <a href="https://www.instagram.com/sd_semutsnapstory" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/semutsemutthenaturalschool" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.semut-semut.sch.id" target="_blank" rel="noopener">Website</a>
+      </div>
+    </footer>
   </main>
 
   <script src="script.js"></script>
