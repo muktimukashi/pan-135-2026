@@ -129,34 +129,46 @@ body {
   font-size: 1rem;
 }
 
-.headline-copy {
+/* =========================
+   INTRO TEXT SETTINGS
+========================= */
+#videoCaption,
+#heroIntro {
   width: min(920px, 94%);
   padding: clamp(28px, 4vw, 44px);
 }
 
-.headline-copy .eyebrow {
+#heroIntro {
+  transform: translateY(24px);
+}
+
+#videoCaption .eyebrow,
+#heroIntro .eyebrow {
   font-size: clamp(0.95rem, 1vw, 1.1rem);
   letter-spacing: 5px;
   margin-bottom: 18px;
 }
 
-.headline-copy .headline-title {
+#videoCaption .headline-title,
+#heroIntro .headline-title {
   display: block;
   margin-bottom: 20px;
-  font-size: clamp(2.5rem, 4.8vw, 4.6rem);
+  font-size: clamp(2.2rem, 4.2vw, 3.8rem);
   line-height: 1.02;
   font-weight: 700;
   text-shadow: 0 6px 28px rgba(0, 0, 0, 0.72);
 }
 
-.headline-copy .headline-lead {
+#videoCaption .headline-lead,
+#heroIntro .headline-lead {
   max-width: 760px;
   margin: 0 auto;
   font-size: clamp(1.35rem, 2vw, 1.95rem);
   line-height: 1.75;
 }
 
-.headline-copy .caption-info {
+#videoCaption .caption-info,
+#heroIntro .caption-info {
   margin-top: 20px;
 }
 
@@ -290,7 +302,7 @@ body {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.46;
+  opacity: 0.72;
   mix-blend-mode: screen;
   transition: opacity 0.6s ease;
 }
@@ -308,12 +320,12 @@ body.spotlight-muted .golden-spotlight {
   height: 104vh;
   transform: translateX(-50%);
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(255, 229, 150, 0.34), rgba(246, 195, 91, 0.1) 24%, transparent 58%),
-    radial-gradient(ellipse at 50% 44%, rgba(246, 195, 91, 0.09), rgba(246, 195, 91, 0.035) 36%, transparent 70%),
-    linear-gradient(to bottom, rgba(255, 230, 145, 0.18), rgba(246, 195, 91, 0.07) 42%, transparent 88%);
+    radial-gradient(ellipse at 50% 0%, rgba(255, 240, 185, 0.5), rgba(246, 195, 91, 0.2) 24%, transparent 58%),
+    radial-gradient(ellipse at 50% 44%, rgba(246, 195, 91, 0.18), rgba(246, 195, 91, 0.08) 36%, transparent 70%),
+    linear-gradient(to bottom, rgba(255, 236, 165, 0.3), rgba(246, 195, 91, 0.12) 42%, transparent 88%);
   -webkit-mask-image: radial-gradient(ellipse at 50% 34%, #000 0 26%, rgba(0, 0, 0, 0.5) 42%, transparent 76%);
   mask-image: radial-gradient(ellipse at 50% 34%, #000 0 26%, rgba(0, 0, 0, 0.5) 42%, transparent 76%);
-  filter: blur(58px);
+  filter: blur(44px);
   transform-origin: 50% 0%;
   animation: spotlightSweep 9s ease-in-out infinite alternate;
 }
@@ -328,12 +340,12 @@ body.spotlight-muted .golden-spotlight {
   transform: translateX(-50%);
   border-radius: 50%;
   background:
-    radial-gradient(ellipse at center, rgba(255, 221, 119, 0.18), rgba(246, 195, 91, 0.06) 42%, transparent 76%),
-    radial-gradient(circle at 42% 48%, rgba(255, 235, 170, 0.34) 0 1px, transparent 3px),
-    radial-gradient(circle at 55% 44%, rgba(255, 213, 95, 0.28) 0 1px, transparent 3px),
-    radial-gradient(circle at 62% 56%, rgba(255, 244, 196, 0.3) 0 1px, transparent 3px),
-    radial-gradient(circle at 35% 55%, rgba(246, 195, 91, 0.26) 0 1px, transparent 3px);
-  filter: blur(7px);
+    radial-gradient(ellipse at center, rgba(255, 230, 145, 0.34), rgba(246, 195, 91, 0.12) 42%, transparent 76%),
+    radial-gradient(circle at 42% 48%, rgba(255, 235, 170, 0.44) 0 1px, transparent 3px),
+    radial-gradient(circle at 55% 44%, rgba(255, 213, 95, 0.38) 0 1px, transparent 3px),
+    radial-gradient(circle at 62% 56%, rgba(255, 244, 196, 0.4) 0 1px, transparent 3px),
+    radial-gradient(circle at 35% 55%, rgba(246, 195, 91, 0.34) 0 1px, transparent 3px);
+  filter: blur(5px);
   animation: footlightPulse 5.6s ease-in-out infinite alternate;
 }
 
@@ -346,17 +358,17 @@ body.spotlight-muted .golden-spotlight {
   transform: translateX(-50%);
   opacity: 0.44;
   background:
-    radial-gradient(circle at 48% 8%, rgba(255, 241, 188, 0.5) 0 1px, transparent 3px),
-    radial-gradient(circle at 34% 16%, rgba(246, 195, 91, 0.42) 0 1px, transparent 3px),
-    radial-gradient(circle at 62% 18%, rgba(255, 232, 150, 0.4) 0 1px, transparent 3px),
-    radial-gradient(circle at 46% 27%, rgba(255, 241, 188, 0.46) 0 1px, transparent 3px),
-    radial-gradient(circle at 58% 34%, rgba(246, 195, 91, 0.4) 0 1px, transparent 3px),
-    radial-gradient(circle at 39% 42%, rgba(255, 232, 150, 0.36) 0 1px, transparent 3px),
-    radial-gradient(circle at 52% 51%, rgba(255, 241, 188, 0.46) 0 1px, transparent 3px),
-    radial-gradient(circle at 66% 60%, rgba(246, 195, 91, 0.34) 0 1px, transparent 3px),
-    radial-gradient(circle at 43% 72%, rgba(255, 232, 150, 0.36) 0 1px, transparent 3px),
-    radial-gradient(circle at 57% 84%, rgba(255, 241, 188, 0.38) 0 1px, transparent 3px);
-  filter: blur(1.6px);
+    radial-gradient(circle at 48% 8%, rgba(255, 241, 188, 0.7) 0 1px, transparent 3px),
+    radial-gradient(circle at 34% 16%, rgba(246, 195, 91, 0.58) 0 1px, transparent 3px),
+    radial-gradient(circle at 62% 18%, rgba(255, 232, 150, 0.56) 0 1px, transparent 3px),
+    radial-gradient(circle at 46% 27%, rgba(255, 241, 188, 0.62) 0 1px, transparent 3px),
+    radial-gradient(circle at 58% 34%, rgba(246, 195, 91, 0.52) 0 1px, transparent 3px),
+    radial-gradient(circle at 39% 42%, rgba(255, 232, 150, 0.48) 0 1px, transparent 3px),
+    radial-gradient(circle at 52% 51%, rgba(255, 241, 188, 0.62) 0 1px, transparent 3px),
+    radial-gradient(circle at 66% 60%, rgba(246, 195, 91, 0.42) 0 1px, transparent 3px),
+    radial-gradient(circle at 43% 72%, rgba(255, 232, 150, 0.46) 0 1px, transparent 3px),
+    radial-gradient(circle at 57% 84%, rgba(255, 241, 188, 0.48) 0 1px, transparent 3px);
+  filter: blur(1.2px);
   animation: sparkleFloat 9s ease-in-out infinite alternate;
 }
 
@@ -368,6 +380,62 @@ body.spotlight-muted .golden-spotlight {
   transform: translateX(-50%) scaleX(0.86);
   animation-duration: 12s;
   animation-delay: -4s;
+}
+
+.falling-leaf {
+  position: absolute;
+  top: -12vh;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 0 10px rgba(255, 217, 102, 0.34));
+  animation: leafFall linear infinite;
+}
+
+.falling-leaf::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 70% 0 70% 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 248, 210, 0.94), transparent 34%),
+    linear-gradient(135deg, rgba(255, 223, 122, 0.98), rgba(214, 151, 36, 0.94));
+  box-shadow:
+    0 0 14px rgba(255, 223, 122, 0.24),
+    inset 0 0 8px rgba(255, 246, 201, 0.3);
+  transform: rotate(18deg);
+}
+
+.leaf-one {
+  left: 14%;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+.leaf-two {
+  left: 32%;
+  width: 22px;
+  height: 22px;
+  animation-duration: 12s;
+  animation-delay: -2.2s;
+}
+
+.leaf-three {
+  left: 64%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 11s;
+  animation-delay: -5s;
+}
+
+.leaf-four {
+  left: 82%;
+  width: 24px;
+  height: 24px;
+  animation-duration: 13s;
+  animation-delay: -7.3s;
 }
 
 .top-bar {
@@ -450,10 +518,6 @@ body.show-nav .top-bar {
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
 }
 
-#heroIntro {
-  transform: translateY(24px);
-}
-
 .eyebrow {
   color: var(--accent);
   font-size: 0.85rem;
@@ -480,6 +544,25 @@ body.show-nav .top-bar {
 
 .story-box p {
   font-size: 1.05rem;
+  color: #eef4ff;
+}
+
+/* =========================
+   SECTION 1 TEXT SETTINGS
+========================= */
+.story-text {
+  width: min(760px, 92%);
+}
+
+.story-text h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
   color: #eef4ff;
 }
 
@@ -967,6 +1050,80 @@ body.show-nav .top-bar {
   }
 }
 
+@keyframes leafFall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -8vh, 0) rotate(0deg) scale(0.92);
+  }
+  10% {
+    opacity: 0.9;
+  }
+  25% {
+    transform: translate3d(24px, 20vh, 0) rotate(82deg) scale(1);
+  }
+  50% {
+    transform: translate3d(-16px, 48vh, 0) rotate(170deg) scale(0.96);
+  }
+  75% {
+    transform: translate3d(22px, 76vh, 0) rotate(260deg) scale(0.92);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-10px, 112vh, 0) rotate(360deg) scale(0.86);
+  }
+}
+
+@media (min-width: 769px) {
+  #videoCaption,
+  #heroIntro {
+    width: min(920px, 88vw);
+    padding: 32px 28px;
+  }
+
+  #videoCaption .eyebrow,
+  #heroIntro .eyebrow {
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+  }
+
+  #videoCaption .headline-title,
+  #heroIntro .headline-title {
+    margin-bottom: 18px;
+    font-size: clamp(2.6rem, 3.2vw, 3.5rem);
+    line-height: 1.06;
+  }
+
+  #videoCaption .headline-lead,
+  #heroIntro .headline-lead {
+    max-width: 700px;
+    font-size: clamp(1.15rem, 1.45vw, 1.5rem);
+    line-height: 1.65;
+  }
+
+  #videoCaption .caption-info p,
+  #heroIntro .caption-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .story-text {
+    width: min(760px, 84vw);
+  }
+
+  .story-text h2 {
+    font-size: clamp(2.15rem, 3vw, 2.8rem);
+    line-height: 1.12;
+    margin-bottom: 16px;
+  }
+
+  .story-text p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.02rem;
+    line-height: 1.8;
+  }
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -992,8 +1149,8 @@ body.show-nav .top-bar {
 
   #videoCaption .headline-title,
   #heroIntro .headline-title {
-    font-size: clamp(2.15rem, 8vw, 2.7rem);
-    line-height: 1.06;
+    font-size: 28px;
+    line-height: 1.4;
     margin-bottom: 16px;
   }
 
