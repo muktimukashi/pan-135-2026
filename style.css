@@ -620,6 +620,7 @@ body.show-nav .top-bar {
 .performance-spotlight {
   position: relative;
   min-height: 390px;
+  isolation: isolate;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -630,9 +631,10 @@ body.show-nav .top-bar {
   background:
     linear-gradient(135deg, rgba(246, 195, 91, 0.2), transparent 38%),
     linear-gradient(to top, rgba(2, 5, 14, 0.92), rgba(10, 26, 57, 0.55)),
-    url("https://picsum.photos/seed/pan-performance-2026/1100/760") center/cover;
+    var(--performance-image, url("246/Adu Pantun.jpeg")) center/cover;
   box-shadow: var(--shadow);
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
+  transition: background 0.35s ease;
 }
 
 .performance-spotlight::before {

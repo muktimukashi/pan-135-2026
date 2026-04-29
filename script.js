@@ -128,6 +128,9 @@ function showPerformance(index) {
   if (number) number.textContent = activeItem.dataset.number;
   if (title) title.textContent = activeItem.dataset.title;
   if (copy) copy.textContent = activeItem.dataset.copy;
+  if (activeItem.dataset.image) {
+    performanceSpotlight.style.setProperty("--performance-image", `url("${activeItem.dataset.image}")`);
+  }
 
   performanceSpotlight.classList.remove("is-changing");
   void performanceSpotlight.offsetWidth;
