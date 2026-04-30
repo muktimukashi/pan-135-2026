@@ -497,7 +497,7 @@ body.show-nav .top-bar {
 .story-box {
   width: min(760px, 92%);
   text-align: center;
-  padding: 34px 28px;
+  padding: 34px 15px;
   border-radius: 0;
   background: transparent;
   border: 0;
