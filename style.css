@@ -8,6 +8,7 @@
   --text: #ffffff;
   --muted: #dbe5ff;
   --accent: #f6c35b;
+  --invitation-cyan: #0cc0df;
   --glass: rgba(8, 15, 34, 0.38);
   --glass-border: rgba(255, 255, 255, 0.12);
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
@@ -107,7 +108,7 @@ body {
   display: block;
   max-width: none;
   margin: 0 0 12px;
-  color: var(--accent);
+  color: var(--invitation-cyan);
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 3px;
@@ -254,8 +255,12 @@ body {
 }
 
 .btn.primary {
-  background: var(--accent);
+  background: var(--invitation-cyan);
   color: #111827;
+}
+
+.tag {
+  color: var(--invitation-cyan);
 }
 
 .btn.secondary {
