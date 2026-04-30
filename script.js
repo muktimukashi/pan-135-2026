@@ -2,16 +2,11 @@ const popup = document.getElementById("popup");
 const popupBox = document.getElementById("popupBox");
 const introVideo = document.getElementById("introVideo");
 const playIntroBtn = document.getElementById("playIntroBtn");
-const skipMusicBtn = document.getElementById("skipMusicBtn");
-const introStatus = document.getElementById("introStatus");
 const videoCaption = document.getElementById("videoCaption");
 const mainContent = document.getElementById("mainContent");
 const bgMusic = document.getElementById("bgMusic");
 const mainMusic = document.getElementById("mainMusic");
 const musicToggle = document.getElementById("musicToggle");
-const gallerySlides = document.querySelectorAll(".gallery-slide");
-const prevSlideBtn = document.getElementById("prevSlide");
-const nextSlideBtn = document.getElementById("nextSlide");
 const performanceItems = document.querySelectorAll(".performance-item");
 const performanceSpotlight = document.getElementById("performanceSpotlight");
 
@@ -27,8 +22,6 @@ let captionShown = false;
 let introFinished = false;
 let scrollFadeTimer;
 let scrollFadeFrame;
-let currentSlide = 0;
-let galleryTimer;
 let currentPerformance = 0;
 let performanceTimer;
 let waitingForMainMusic = false;
@@ -87,29 +80,6 @@ async function switchToMainMusic() {
   waitingForMainMusic = false;
   musicPlaying = await playAudio(mainMusic);
   updateMusicButton();
-}
-
-function showGallerySlide(index) {
-  if (!gallerySlides.length) return;
-
-  currentSlide = (index + gallerySlides.length) % gallerySlides.length;
-  gallerySlides.forEach((slide, slideIndex) => {
-    slide.classList.toggle("active", slideIndex === currentSlide);
-  });
-}
-
-function startGalleryAutoPlay() {
-  if (gallerySlides.length < 2) return;
-
-  clearInterval(galleryTimer);
-  galleryTimer = setInterval(() => {
-    showGallerySlide(currentSlide + 1);
-  }, 4600);
-}
-
-function moveGallery(direction) {
-  showGallerySlide(currentSlide + direction);
-  startGalleryAutoPlay();
 }
 
 function showPerformance(index) {
@@ -193,9 +163,7 @@ async function enterSite(withMusic) {
 
   popupBox.classList.add("hide");
   if (videoCaption) videoCaption.classList.remove("show");
-  introStatus.classList.add("hidden");
   playIntroBtn.disabled = true;
-  if (skipMusicBtn) skipMusicBtn.disabled = true;
 
   if (withMusic) {
     await playMusic();
@@ -213,10 +181,6 @@ async function enterSite(withMusic) {
 }
 
 playIntroBtn.addEventListener("click", () => enterSite(true));
-
-if (skipMusicBtn) {
-  skipMusicBtn.addEventListener("click", () => enterSite(false));
-}
 
 if (introVideo) {
   introVideo.addEventListener("timeupdate", () => {
@@ -257,14 +221,6 @@ function resetScrollFade() {
     element.style.opacity = 1;
     element.style.transform = "none";
   });
-}
-
-if (prevSlideBtn) {
-  prevSlideBtn.addEventListener("click", () => moveGallery(-1));
-}
-
-if (nextSlideBtn) {
-  nextSlideBtn.addEventListener("click", () => moveGallery(1));
 }
 
 performanceItems.forEach((item, itemIndex) => {
@@ -309,8 +265,6 @@ window.addEventListener("scroll", handleScroll);
 window.addEventListener("resize", resetScrollFade);
 window.addEventListener("load", () => {
   updateMusicButton();
-  showGallerySlide(0);
-  startGalleryAutoPlay();
   showPerformance(0);
   startPerformanceAutoPlay();
   resetScrollFade();
