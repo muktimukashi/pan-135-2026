@@ -96,7 +96,7 @@ body {
 
 .popup-logo {
   display: block;
-  width: min(160px, 48vw);
+  width: min(220px, 58vw);
   height: auto;
   margin: 0 auto 16px;
   filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.38));
@@ -1039,7 +1039,7 @@ body.show-nav .top-bar {
   }
 
   .popup-logo {
-    width: min(132px, 44vw);
+    width: min(190px, 62vw);
     margin-bottom: 14px;
   }
 
@@ -1054,6 +1054,7 @@ body.show-nav .top-bar {
 
   .story-box p {
     font-size: 0.98rem;
+    text-align: justify;
   }
 
   .intro-copy p {
