@@ -8,7 +8,7 @@
 :root {
   --text: #ffffff;
   --muted: #dbe5ff;
-  --accent: #0cc0df;
+  --accent: #e88686;
   --glass: rgba(8, 15, 34, 0.38);
   --glass-border: rgba(255, 255, 255, 0.12);
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
@@ -284,7 +284,7 @@ body {
   inset: 0;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.28)),
-    url("image.png");
+    url("image (2).png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
