@@ -87,6 +87,12 @@ body {
   animation: popupShow 0.55s ease;
 }
 
+.popup-box h2,
+.popup-box p,
+.popup-box .tag {
+  text-align: center;
+}
+
 .popup-box.hide {
   opacity: 0;
   transform: scale(0.96);
@@ -559,6 +565,7 @@ body.show-nav .top-bar {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #eef4ff;
+  text-align: center;
 }
 
 /* =========================
@@ -1054,7 +1061,6 @@ body.show-nav .top-bar {
 
   .story-box p {
     font-size: 0.98rem;
-    text-align: justify;
   }
 
   .intro-copy p {
