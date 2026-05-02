@@ -613,11 +613,8 @@ body.show-nav .top-bar {
   padding: clamp(26px, 5vw, 48px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(246, 195, 91, 0.2), transparent 38%),
-    linear-gradient(to top, rgba(2, 5, 14, 0.92), rgba(10, 26, 57, 0.55)),
-    var(--performance-image, url("246/Adu Pantun.jpeg")) center/cover;
-  box-shadow: var(--shadow);
+  background: var(--performance-image, url("135/Tari Janger.jpeg")) center/cover;
+  box-shadow: none;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
   transition: background 0.35s ease;
 }
